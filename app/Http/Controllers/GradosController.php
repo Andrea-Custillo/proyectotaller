@@ -23,12 +23,16 @@ class GradosController extends Controller
    
     public function store(Request $request)
     {
-        
+        $grado= new Grados($request->input());
+        $grado->saveOrFail();
+        return redirect('grados');
     }
 
    
     public function show($id)
     {
+        $grado = Grados::find($id);
+        return view('editgrado',compact('grado'));
         
     }
 
@@ -41,12 +45,16 @@ class GradosController extends Controller
   
     public function update(Request $request, $id)
     {
-        
+        $grado = Grados::find($id);
+        $grado->fill($request->input())->saveOrFail();
+        return redirect('grados');
     }
 
    
     public function destroy($id)
     {
-        
+        $grado = Grados::find($id);
+        $grado->delete();
+        return redirect('grados');
     }
 }
