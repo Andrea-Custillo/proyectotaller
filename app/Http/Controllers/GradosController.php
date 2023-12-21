@@ -14,6 +14,12 @@ class GradosController extends Controller
         return view('grados',compact('grados'));
     }
 
+
+    
+    public function pdf(){
+
+        
+    }
     
     public function create()
     {

@@ -16,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('plantilla');
 });
+
+//Route::get('grados/pdf',[App\Http\Controllers\GradosController::class, 'pdf'])->name('grado.pdf');
 Route::resource('grados', App\Http\Controllers\GradosController::class);
 Route::resource('alumnos', App\Http\Controllers\AlumnosController::class);
+Route::resource('materias', App\Http\Controllers\MateriasController::class);
+Route::resource('notas', App\Http\Controllers\NotasController::class);

@@ -25,6 +25,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/grados">Grados</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/materias">Materias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/notas">Notas</a>
+                        </li>
                     </ul>
                 </div>
             </div>
